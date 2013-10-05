@@ -1,0 +1,13 @@
+<h1>Search</h1>
+
+<%= form_for @idea, url: search_result_ideas_path do |f| %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Search" %>
+  </div>
+<% end %>

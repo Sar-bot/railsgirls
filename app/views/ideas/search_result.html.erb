@@ -1,0 +1,28 @@
+<h1>Results!!!</h1>
+
+<% if @result.nil? %>
+
+No results.
+
+<% else %>
+
+<p>
+  <strong>Name:</strong>
+  <%= @result.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @result.description %>
+</p>
+
+<p>
+  <strong>Picture:</strong>
+  <%= image_tag(@result.picture_url, :width => 600) if @result.picture.present? %>
+</p>
+
+<%= link_to 'Edit', edit_idea_path(@result) %> |
+<%= link_to 'Back', ideas_path %>
+
+
+<% end %>
